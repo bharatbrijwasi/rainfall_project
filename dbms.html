@@ -1,0 +1,58 @@
+<style>lables{display: inline-block;width: 80px;} </style>
+<body>
+<label>name</label><input id="namebox" type="text"
+<label>Rollno</label><input id="rollbox" type="text"
+<label>class</label><input id="classbox" type="text"
+<label>section</label><input id="sectionbox" type="text"
+    <label>DOB</label><input id="DOBbox" type="text"
+    <label>fathersname</label><input id="fathersnamebox" type="text"
+<hr>
+<button id="instbtn">insert</button>
+<button id="slectbtn">select</button>
+<button id="updtbtn">update</button>
+<button id="dltbtn">delete</button>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyA5mnsF_-vyTsWfQF6oVO-cuKZSjnDcYGs",
+    authDomain: "school-management-system-e7fdc.firebaseapp.com",
+    projectId: "school-management-system-e7fdc",
+    storageBucket: "school-management-system-e7fdc.appspot.com",
+    messagingSenderId: "94446617586",
+    appId: "1:94446617586:web:645bdb57e3852a9f85a16b",
+    measurementId: "G-0MVVQWLKNL"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  import {getdatabase,ref,set,child,update,remove}
+  from  "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js"
+  const db = getDatabase();
+  var namebox = document.getElementbyid("namebox");
+  var rollbox = document.getElementbyid("rollbox");
+  var classbox = document.getElementbyid("classbox");
+  var sectionbox = document.getElementbyid("sectionbox");
+  var DOBbox = document.getElementbyid("DOBbox");
+  var fathersnamebox = document.getElementbyid(fathersnamebox);
+  var <button id="instbtn">insert</button>
+var instbtn = document.getElementbyid("instbtn")
+var slectbtn = document.getElementbyid("slectbtn")
+var updtbtn = document.getElementbyid("updtbtn")
+var dltbtn = document.getElementbyid("dltbtn")
+function insertdata(){
+    set(ref(db,"thestudents/" + rollbox.value),{
+        nameofstd: namebox.value,
+    })
+}
+</script>
+</body>
+</html>
